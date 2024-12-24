@@ -1,0 +1,188 @@
+/* Font İmportu */
+/* CDN üzerinden General Sans fontunu yüklüyor. */
+@import url('https://fonts.cdnfonts.com/css/general-sans');
+
+/* Tailwind Temel Ayarları */
+/* Tailwind'in temel stillerini, bileşenlerini ve yardımcı sınıflarını projeye dahil ediyor. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Genel Ayarlar */
+/* Tüm öğeler için yumuşak kaydırma davranışı (scroll-behavior) ekleniyor. */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Body Temel Ayarları */
+/* Tüm sayfa arka planı ve yazı fontu ayarlanıyor. */
+body {
+  background: #ffffff; /* Siyah arka plan */
+  font-family: 'General Sans', sans-serif; /* General Sans fontu */
+}
+
+/* Tailwind Utilities Layer'ı */
+/* Kullanıcıya özel Tailwind sınıfları tanımlanıyor. */
+@layer utilities {
+  
+  /* Genel Boşluk Ayarı */
+  .c-space {
+    @apply sm:px-10 px-5; /* Küçük ekranlarda 10px, diğerlerinde 5px padding */
+  }
+
+  /* Başlık Yazı Stili */
+  .head-text {
+    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient; /* Başlık boyutu ve gradyan yazı rengi */
+  }
+
+  /* Navigasyon Menüsü */
+  .nav-ul {
+    @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20; /* Menü öğeleri için düzenleme */
+  }
+
+  .nav-li {
+    @apply text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5; /* Menü linkleri için yazı ve hover stili */
+  }
+
+  .nav-li_a {
+    @apply text-lg md:text-base hover:text-white transition-colors; /* Menü link boyutları ve geçiş efektleri */
+  }
+
+  /* Mobil Menüsü */
+  .nav-sidebar {
+    @apply absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block; /* Mobil menü stilleri */
+  }
+
+  /* Yazı için Gradyan Efekti */
+  .text-gray_gradient {
+    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent; /* Gradyan yazı efekti */
+  }
+
+  /* Butonlar */
+  .btn {
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300 transition-all active:scale-95 text-white mx-auto; /* Genel buton stili */
+  }
+
+  .btn-ping {
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75; /* Buton etrafında ping animasyonu */
+  }
+
+  .btn-ping_dot {
+    @apply relative inline-flex rounded-full h-3 w-3 bg-green-500; /* Ping animasyonunun noktası */
+  }
+
+  /* Hero Bölümü */
+  .hero_tag {
+    @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal; /* Hero başlığı */
+  }
+
+  /* About Bölümü */
+  .grid-container {
+    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5; /* Grid içeriği için düzenleme */
+  }
+
+  .grid-headtext {
+    @apply text-xl font-semibold mb-2 text-white font-generalsans; /* Grid başlık yazı tipi */
+  }
+
+  .grid-subtext {
+    @apply text-[#afb0b6] text-base font-generalsans; /* Grid alt yazı tipi */
+  }
+
+  .copy-container {
+    @apply cursor-pointer flex justify-center items-center gap-2; /* Kopyalama alanı */
+  }
+
+  /* Projeler Bölümü */
+  .arrow-btn {
+    @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient; /* Ok butonu */
+  }
+
+  .tech-logo {
+    @apply w-10 h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center; /* Teknoloji logosu */
+  }
+
+  /* Müşteri Yorumları Bölümü */
+  .client-container {
+    @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12; /* Yorum alanları düzenleme */
+  }
+
+  .client-review {
+    @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50; /* Tek yorum alanı */
+  }
+
+  /* Çalışma Tecrübesi */
+  .work-container {
+    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12; /* Tecrübe bölümü grid */
+  }
+
+  /* İletişim Bölümü */
+  .contact-container {
+    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12; /* İletişim formu düzeni */
+  }
+
+  .field-label {
+    @apply text-lg text-white-600; /* Form etiketi */
+  }
+
+  .field-input {
+    @apply w-full bg-black-300 px-5 py-2 min-h-14 rounded-lg placeholder:text-white-500 text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none; /* Giriş alanı */
+  }
+
+  .field-btn {
+    @apply bg-black-500 px-5 py-2 min-h-12 rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3; /* Gönder butonu */
+  }
+
+  /* Sosyal Medya İkonları */
+  .social-icon {
+    @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200; /* Sosyal medya ikonları */
+  }
+}
+
+/* Sallanan El Animasyonu */
+.waving-hand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+/* Gradyan Ok */
+.arrow-gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+}
+
+/* Sallanan El Keyframe Animasyonu */
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
