@@ -37,7 +37,7 @@ body {
 
   /* Navigasyon Menüsü */
   .nav-ul {
-    @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20; /* Menü öğeleri için düzenleme */
+    @apply flex flex-row items-center gap-4 sm:flex-row md:gap-6 relative z-20; /* Menü öğeleri için düzenleme */
   }
 
   .nav-li {
