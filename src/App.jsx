@@ -1,15 +1,23 @@
-import React from 'react'
-import Navbar from './sections/Navbar'
-import Hero from './sections/Hero'
-import Footer from './sections/Footer'
+// App.jsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import RootLayout from './lasyouts/RootLayout'
+import Home from './pages/HomePage'
+import About from './pages/AboutPage'
+import Login from './pages/LoginPage'
+import SearchHomePage from './pages/SearchHomePage'
 
-const App = () => {
+function App() {
   return (
-    <main className='mx-auto'>
-          <Navbar />
-          <Hero />
-          <Footer />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/underdevelop" element={<SearchHomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';                                 // React ve useState hook'u import ediliyor.
-import Logo from '../components/Navbar/LogoNavbar';                            // Logo bileşeni.
+import LogoNavbar from '../components/Navbar/LogoNavbar';                            // Logo bileşeni.
 import NavLinks from '../components/Navbar/NavLinks';                    // Navigasyon bağlantıları bileşeni.
 import AuthButtons from '../components/Navbar/AuthButtons';              // Giriş ve Kayıt Ol butonları bileşeni.
 import MobileMenuButton from '../components/Navbar/MobileMenuButtons';   // Mobil menü aç/kapa butonu bileşeni.
 import MobileMenu from '../components/Navbar/MobileMenu';                // Mobil menü bileşeni.
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -20,8 +21,9 @@ const Navbar = () => {
           {/* Sol Taraf: Logo ve Navigasyon Bağlantıları */}
           <div className="flex items-center gap-2">
             {/* Logo */}
-            <Logo />
-
+            <Link to='/'>
+              <LogoNavbar />
+            </Link>
 
             {/* Geniş ekranlarda gösterilen navigasyon bağlantıları */}
             <div className="hidden md:flex items-center ml-4 lg:ml-8">

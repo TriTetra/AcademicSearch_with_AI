@@ -6,7 +6,8 @@ import React from 'react'; // React kütüphanesi, bileşen oluşturmak için ku
 import yadigar from '../assets_comp/yadigar.png';
 import Font from '../Font';
 
-const Logo = () => {
+
+const LogoNavbar = () => {
     return (
 
       <section>
@@ -35,4 +36,4 @@ const Logo = () => {
     );
   };
   
-export default Logo
+export default LogoNavbar

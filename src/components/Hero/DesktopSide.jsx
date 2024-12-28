@@ -50,7 +50,7 @@ export const DesktopSide = () => {
     <section className="min-h-screen w-full flex flex-col relative">
       
       {/* Navbar Altındaki Hero Bölümü */}
-      <div className="flex flex-row justify-between w-full mt-20 items-start">
+      <div className="flex flex-row justify-between w-full mt-10 items-start">
 
           {/* Sol Taraf (Boşluk veya Menü) */}
           <div className="flex-1 w-full max-w-[90%] lg:max-w-[600px]">
