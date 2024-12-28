@@ -1,6 +1,6 @@
 // App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import RootLayout from './lasyouts/RootLayout'
+import RootLayout from './layouts/RootLayout'
 import Home from './pages/HomePage'
 import About from './pages/AboutPage'
 import Login from './pages/LoginPage'
