@@ -1,12 +1,24 @@
-<<<<<<< HEAD
-# Biruni_thirdYear_FinalProjects
-=======
-# React + Vite
+# Research Insights Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and user-friendly platform for discovering and accessing millions of research papers, articles, and studies.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
->>>>>>> 92fb222 (updated)
+- **Advanced Search Bar**: Search for research topics with ease.
+- **Popular Searches**: Quickly access trending topics like AI Ethics, Climate Change, and Quantum Computing.
+- **Responsive Design**: Optimized for all devices with a clean and modern UI.
+- **Customizable Filters**: Apply filters like date range and categories to refine your search.
+
+## Technologies Used
+
+- **React**: Component-based architecture for a seamless user experience.
+- **TailwindCSS**: Responsive and modern styling.
+- **Lucide Icons**: Elegant and lightweight icons for UI elements.
+- **Vite**: Lightning-fast development environment.
+- **Three.js**: 3D graphics and visualizations for an enhanced user interface.
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/research-insights.git
