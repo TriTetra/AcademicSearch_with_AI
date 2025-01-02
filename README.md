@@ -21,4 +21,4 @@ A responsive and user-friendly platform for discovering and accessing millions o
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/research-insights.git
+   git clone https://github.com/TriTetra/AcademicSearch_with_AI.git
