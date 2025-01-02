@@ -1,7 +1,8 @@
 import React from 'react';
-import LogoLogin from './LogoLogin'; // Özel logo bileşeni
+// import LogoLogin from './LogoLogin'; // Özel logo bileşeni
 import LanguageSelector from '../LanguageSelector/LanguageSelect.jsx'; // Dil seçici bileşeni
 import { Link } from 'react-router-dom';
+import Logo from '../Logo&Brand/Logo.jsx';
 
 
 const LoginPageNavbar = () => {
@@ -10,7 +11,7 @@ const LoginPageNavbar = () => {
       {/* Sol: Logo ve Home düğmesi */}
       <div className="flex items-center gap-4">
         <Link to='/'>
-            <LogoLogin />
+            <Logo variant='loginPage'/>
         </Link>
         
         <LanguageSelector variant="loginPage" /> {/* Navbar için özelleştirilmiş stil */}

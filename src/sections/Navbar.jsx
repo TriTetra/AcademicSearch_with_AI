@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';                                 // React ve useState hook'u import ediliyor.
-import LogoNavbar from '../components/Navbar/LogoNavbar';                            // Logo bileşeni.
+// import LogoNavbar from '../components/Navbar/LogoNavbar';                            // Logo bileşeni.
+import Logo from '../components/Logo&Brand/Logo';
 import NavLinks from '../components/Navbar/NavLinks';                    // Navigasyon bağlantıları bileşeni.
 import AuthButtons from '../components/Navbar/AuthButtons';              // Giriş ve Kayıt Ol butonları bileşeni.
 import MobileMenuButton from '../components/Navbar/MobileMenuButtons';   // Mobil menü aç/kapa butonu bileşeni.
@@ -22,7 +23,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             {/* Logo */}
             <Link to='/'>
-              <LogoNavbar />
+              <Logo variant='navbar'/>
             </Link>
 
             {/* Geniş ekranlarda gösterilen navigasyon bağlantıları */}

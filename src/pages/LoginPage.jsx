@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../sections/Navbar';
 import LoginPageNavbar from '../components/Login/LoginPageNavbar';
+import LoginForm from '../components/Login/LoginForm';
+import { Canvas } from '@react-three/fiber';
+import EarthScene from '../components/ThreeModels/EarthScene';
+import BlackholeScene from '../components/ThreeModels/BlackholeScene';
 
 const LoginPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -30,13 +34,42 @@ const LoginPage = () => {
       )}
 
       {/* Login sayfası içeriği */}
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div>
-          {/* Login formu */}
-          <h1 className="text-2xl font-bold">Login Page</h1>
-          <p>Welcome to the login page.</p>
+      <div className="flex h-screen bg-gray-50">
+
+      {/* Sol Taraf */}
+      <div className="flex-1 flex flex-col items-center justify-center p-6">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Your ideas, amplified</h1>
+        <p className="text-lg text-gray-600 mb-6">
+          Privacy-first AI that helps you create in confidence.
+        </p>
+        <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-md">
+          <button className="w-full py-2 px-4 mb-4 flex items-center justify-center bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">
+            Continue with Google
+          </button>
+          <p className="text-center text-sm text-gray-400 mb-4">OR</p>
+          <input
+            type="email"
+            placeholder="Enter your personal or work email"
+            className="w-full py-2 px-4 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button className="w-full py-2 px-4 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-orange-700 transition">
+            Continue with email
+          </button>
+          <p className="text-xs text-gray-400 mt-4 text-center">
+            By continuing, you agree to the terms and privacy policy.
+          </p>
         </div>
       </div>
+
+
+      {/* Sağ Taraf */}
+      <div className="flex-1 flex items-center justify-center p-6">
+        <div className="size-full bg-gray-400 rounded-md shadow-lg flex justify-center items-center">
+            <BlackholeScene />
+        </div>
+      </div>
+    </div>
+
 
       {/* Scroll için ek içerik */}
       <div className="min-h-screen bg-gray-200 flex items-center justify-center">

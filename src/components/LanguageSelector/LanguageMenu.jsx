@@ -3,6 +3,7 @@ import LanguageButton from './LanguageButtons'; // Dil seçeneği butonları
 
 const LanguageMenu = ({ isOpen, languages, selectedLanguage, onSelectLanguage, onClose, variant = 'default' }) => {
   // Stil seçeneklerini variant'a göre belirleyin
+  
   const menuStyles = {
     default: 'absolute right-50 bottom-full',
     loginPage: 'absolute right-50 top-full', // LoginPage için sağa kaydırılmış konum

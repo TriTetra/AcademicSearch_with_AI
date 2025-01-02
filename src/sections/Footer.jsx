@@ -2,7 +2,6 @@ import React from 'react'; // React ana modülü
 import BrandSection from '../components/Footer/BrandSection';
 import LanguageSelector from '../components/LanguageSelector/LanguageSelect.jsx.jsx';
 import Font from '../components/Font';
-import Newsletter from '../components/Footer/Newsletter.jsx';
 import FooterMenu from '../components/Footer/FooterMenu.jsx';
 
 // Footer bileşeni

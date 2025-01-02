@@ -3,8 +3,8 @@ import { Leva, useControls} from 'leva';
 
 import Greeting from './Greeting';
 import ButtonsHero from './ButtonsHero';
-import TurtleScene from './TurtleScene';
-import HumanDNAScene from './HumanDNAScene';
+import TurtleScene from '../ThreeModels/TurtleScene';
+import HumanDNAScene from '../ThreeModels/HumanDNAScene';
 
 
 export const DesktopSide = () => {
