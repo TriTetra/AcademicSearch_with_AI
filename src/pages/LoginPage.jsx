@@ -7,6 +7,8 @@ import { Canvas } from '@react-three/fiber';
 
 import BlackholeScene from '../components/ThreeModels/BlackholeScene'
 import SkullHeadScene from '../components/ThreeModels/SkullHeadScene'
+import Logo from '../components/Logo&Brand/Logo';
+import FontSecond from '../components/FontSecond';
 
 const LoginPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -38,29 +40,25 @@ const LoginPage = () => {
       <div className="flex h-screen bg-gray-50">
 
       {/* Sol Taraf */}
-      <div className="flex-1 flex flex-col items-center justify-center p-6">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Your ideas, amplified</h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Privacy-first AI that helps you create in confidence.
-        </p>
-        <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-md">
-          <button className="w-full py-2 px-4 mb-4 flex items-center justify-center bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">
-            Continue with Google
-          </button>
-          <p className="text-center text-sm text-gray-400 mb-4">OR</p>
-          <input
-            type="email"
-            placeholder="Enter your personal or work email"
-            className="w-full py-2 px-4 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <button className="w-full py-2 px-4 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-orange-700 transition">
-            Continue with email
-          </button>
-          <p className="text-xs text-gray-400 mt-4 text-center">
-            By continuing, you agree to the terms and privacy policy.
-          </p>
+      <div className="flex-1 flex flex-col items-center justify-center p-6 relative">
+
+        {/* Logo en üstte ve ortalanmış */}
+        <div className="absolute top-4 left-0 right-0 flex justify-center pt-8">
+          <Logo variant="footer" />
         </div>
+
+        <div className="text-5xl font-medium text-gray-800 mb-4 text-center pt-10">Think Smarter, <br/> Work Faster</div>
+
+          {/* Açıklama Yazısı */}
+
+          <p className="text-lg text-gray-600 mb-6 text-center">
+            Explore knowledge with confidence, powered by AI.
+          </p>
+
+        <LoginForm />
+
       </div>
+
 
 
       {/* Sağ Taraf */}
