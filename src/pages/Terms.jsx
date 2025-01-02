@@ -3,7 +3,7 @@ import React from 'react'
 
 const Terms = () => {
     return (
-      <div className="min-h-[calc(100vh-200px)]">
+      <div className="min-h-[calc(100vh-200px)] flex items-center justify-center">
         <h1 className="text-3xl font-bold mb-6">Consumer Terms</h1>
         <div className="prose">
           <h2 className="text-xl font-semibold mb-4">1. Acceptance of Terms</h2>
