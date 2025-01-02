@@ -4,8 +4,9 @@ import Navbar from '../sections/Navbar';
 import LoginPageNavbar from '../components/Login/LoginPageNavbar';
 import LoginForm from '../components/Login/LoginForm';
 import { Canvas } from '@react-three/fiber';
-import EarthScene from '../components/ThreeModels/EarthScene';
-import BlackholeScene from '../components/ThreeModels/BlackholeScene';
+
+import BlackholeScene from '../components/ThreeModels/BlackholeScene'
+import SkullHeadScene from '../components/ThreeModels/SkullHeadScene'
 
 const LoginPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -64,8 +65,8 @@ const LoginPage = () => {
 
       {/* Sağ Taraf */}
       <div className="flex-1 flex items-center justify-center p-6">
-        <div className="size-full bg-gray-400 rounded-md shadow-lg flex justify-center items-center">
-            <BlackholeScene />
+        <div className="size-full bg-gray-200 rounded-md shadow-lg flex justify-center items-center">
+            <SkullHeadScene />
         </div>
       </div>
     </div>

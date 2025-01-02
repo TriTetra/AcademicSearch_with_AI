@@ -9,6 +9,7 @@ Title: Blackhole
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import blackholeGLTB from '../models/blackhole.glb'
+import { viewport } from 'three/tsl'
 
 
 const Blackhole = (props) => {

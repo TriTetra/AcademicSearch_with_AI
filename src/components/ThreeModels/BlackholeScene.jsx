@@ -1,24 +1,22 @@
-
-import React, { Suspense } from 'react';
-import HeroCamera from './HeroCamera'
-import CanvasLoader from './CanvasLoader'
-import DNA_GLB from './modelsGLB/DNA_GLB';
-import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
-import Blackhole from './modelsGLB/BlackHole';
+import React, { useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Points, PointMaterial } from "@react-three/drei";
+import Blackhole from "./modelsGLB/BlackHole"; // Blackhole modeli
 
 const BlackholeScene = () => {
   return (
-    <section>
-        {/* 3D Sahne Alanı */}
-        <div className="w-[200px] h-[300px] relative border border-gray-300 rounded-lg shadow-md">
+    <div className="h-full w-full ">
+      <Canvas>
 
-            <Canvas className="w-full h-full items-center">
-                <Blackhole />
-            </Canvas>
-        </div>
-    </section>
-  )
-}
+        {/* Işıklar */}
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[10, 10, 10]} intensity={1} />
 
-export default BlackholeScene
+        {/* 3D Model */}
+        <Blackhole scale={1.5} />
+      </Canvas>
+    </div>
+  );
+};
+
+export default BlackholeScene;
