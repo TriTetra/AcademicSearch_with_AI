@@ -48,10 +48,10 @@ export const DesktopSide = () => {
     }})*/}
 
   return (
-      <section className="min-h-screen w-full relative">
+      <section className="min-h-screen w-full relative ">
         {/* Navbar Altındaki Hero Bölümü */}
 
-        <div className='h-52'>
+        <div className='h-12'>
 
         </div>
         <div className="flex flex-col items-center justify-center gap-6">
