@@ -8,20 +8,21 @@ const Greeting = () => {
     <section>
         <Font />
 
+            <div className='w-full p-1 flex justify-center items-center text-center text-gray-400'>
+              <p>
+              Effortless exploration of knowledge, <span className="underline underline-offset-8 decoration-black-100">powered by advanced AI</span> tools.
+              </p>
+            </div>
+
+
             {/* Tanıtım Bölümü */}
-            <div className="w-full p-1">
+            <div className="w-full p-1 flex justify-center items-center text-center">
+              <p 
+                  className="sm:text-7xl text-2xl font-semibold text-black-100 font-generalsans " 
+                  style={{ fontFamily: '"PT Sans", sans-serif' }}>
 
-            <p 
-                className="sm:text-7xl text-2xl font-semibold text-black-100 font-generalsans" 
-                style={{ fontFamily: '"PT Sans", sans-serif' }}>
-
-                Bringing Science Closer to All
-            </p>
-
-            <p className="sm:text-2xl pt-4">
-                Effortless exploration of knowledge, <span className="underline underline-offset-8">powered by advanced AI</span> tools.
-            </p>
-            
+                  From discovery to organization, Yadigar simplifies it all.
+              </p>            
             </div>
 
     </section>

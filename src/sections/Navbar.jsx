@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     // Navbar ana kapsayıcı.
-    <nav className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-sm border-gray-200 pt-1">
+    <nav className="fixed w-full top-0 z-50 bg-gray-50 backdrop-blur-sm border-gray-200 pt-1">
       {/* İçerik kapsayıcı */}
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-14 items-center">

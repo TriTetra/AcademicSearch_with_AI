@@ -5,6 +5,7 @@ import Greeting from './Greeting';
 import ButtonsHero from './ButtonsHero';
 import TurtleScene from '../ThreeModels/TurtleScene';
 import HumanDNAScene from '../ThreeModels/HumanDNAScene';
+import SearchBar from '../SearchHero/SearchBar';
 
 
 export const DesktopSide = () => {
@@ -47,28 +48,21 @@ export const DesktopSide = () => {
     }})*/}
 
   return (
-    <section className="min-h-screen w-full flex flex-col relative">
-      
-      {/* Navbar Altındaki Hero Bölümü */}
-      <div className="flex flex-row justify-between w-full mt-10 items-start">
+      <section className="min-h-screen w-full relative">
+        {/* Navbar Altındaki Hero Bölümü */}
 
-          {/* Sol Taraf (Boşluk veya Menü) */}
-          <div className="flex-1 w-full max-w-[90%] lg:max-w-[600px]">
-              <Greeting />
-              <ButtonsHero />
-          </div>
+        <div className='h-52'>
 
-          {/* İkinci Div: Sağdaki Ek Div */}
-          <div className="w-[200px] h-full border border-gray-300 rounded-lg shadow-md">
-              <HumanDNAScene />
-          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6">
+          {/* Hero İçeriği */}
+          <Greeting />
+        </div>
 
-          {/* Sağ Taraf (Hero ve 3D Model) */}
-          <div className="flex-1 max-w-[400px] flex justify-end">
-            <TurtleScene />
-          </div>
-      </div>
-    </section>
+        <div className='w-full h-full py-12'>
+          <SearchBar />
+        </div>
 
+      </section>
   );
 };
