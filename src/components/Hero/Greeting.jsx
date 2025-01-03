@@ -10,7 +10,7 @@ const Greeting = () => {
 
             <div className='w-full p-1 flex justify-center items-center text-center text-gray-400'>
               <p>
-              Effortless exploration of knowledge, <span className="underline underline-offset-8 decoration-black-100">powered by advanced AI</span> tools.
+              Effortless exploration of knowledge, <span className="underline underline-offset-8 decoration-black-100 italic">powered by advanced AI</span> tools.
               </p>
             </div>
 

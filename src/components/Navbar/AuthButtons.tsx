@@ -16,11 +16,12 @@ const AuthButtons = () => {
         </button>
       </Link>
       
-      
-      {/* Get Started düğmesi */}
-      <button className="px-3 py-1.5 text-sm text-white bg-black hover:bg-black-500 rounded-md transition-colors">
-        Get Yadigar Free
-      </button>
+      <Link to='login'>
+        {/* Get Started düğmesi */}
+        <button className="px-3 py-1.5 text-sm text-white bg-black hover:bg-black-500 rounded-md transition-colors">
+          Get Yadigar Free
+        </button>
+      </Link>
     </div>
   );
 };

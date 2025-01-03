@@ -69,12 +69,12 @@ const SearchBar = ({ onSearch }) => {
       </form>
 
       {/* Centered Hello World Div */}
-      <div className="flex flex-col justify-center items-center w-1/2 h-24 bg-gray-400 rounded-b-lg">
+      <div className="flex flex-col justify-center items-center w-1/2 h-24 bg-amber-700 rounded-b-2xl border-2 border-gray-300 shadow-lg">
 
         <div className="flex flex-row items-center justify-between w-full px-5">
 
           {/* Yazıyı sola hizala */}
-          <div className="text-xs text-gray-700">
+          <div className="text-xs text-white font-medium">
             Collaborate with Yadigar using documents, images, and more
           </div>
 
@@ -94,11 +94,11 @@ const SearchBar = ({ onSearch }) => {
 
 
         {/* Separate column item */}
-        <div className='flex flex-row items-center justify-between w-full px-5 pt-3 font-light'>
+        <div className='flex flex-row items-center justify-between w-full px-7 pt-3 font-light'>
 
-          <Link to='/'><div className='border font-light text-sm border-gray-300 hover:bg-amber-100 hover:text-amber-700 hover:border-amber-700 rounded-2xl px-2 py-2' >Example search text 1</div></Link>
-          <Link to='/'><div className='border font-light text-sm border-gray-300 hover:bg-amber-100 hover:text-amber-700 hover:border-amber-700 rounded-2xl px-2 py-2'>Example search text 2</div></Link>
-          <Link to='/'><div className='border font-light text-sm border-gray-300 hover:bg-amber-100 hover:text-amber-700 hover:border-amber-700 rounded-2xl px-2 py-2'>Example search text 3</div></Link>
+          <Link to='/'><div className='border text-white font-light text-xs border-gray-300 hover:bg-amber-100 hover:text-amber-700 hover:border-amber-700 rounded-2xl px-4 py-2' >Example search text 1</div></Link>
+          <Link to='/'><div className='border text-white font-light text-xs border-gray-300 hover:bg-amber-100 hover:text-amber-700 hover:border-amber-700 rounded-2xl px-4 py-2'>Example search text 2</div></Link>
+          <Link to='/'><div className='border text-white font-light text-xs border-gray-300 hover:bg-amber-100 hover:text-amber-700 hover:border-amber-700 rounded-2xl px-4 py-2'>Example search text 3</div></Link>
           
         </div>
       </div>
