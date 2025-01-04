@@ -8,6 +8,7 @@ import SearchHomePage from './pages/SearchHomePage'
 import Terms from './pages/Terms'
 import UsagePolicy from './pages/UsagePolicy'
 import Privacy from './pages/Privacy'
+import UnderDevelopment from './pages/UnderDevelopment'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/usage-policy" element={<UsagePolicy />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/under-development" element={<UnderDevelopment />} />
         </Route>
       </Routes>
     </BrowserRouter>

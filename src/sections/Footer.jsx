@@ -9,7 +9,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear(); // Dinamik olarak mevcut yılı almak için bir değişken oluşturuluyor
 
   return (
-    <footer className="w-full border-t border-gray-200 bg-white"> {/* Footer ana kapsayıcı */}
+    <footer className="w-full border-t border-gray-200 bg-gray-50"> {/* Footer ana kapsayıcı */}
       <div className="mx-auto max-w-7xl px-4 py-12"> {/* İçerik merkezi ve genişliği ayarları */}
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> {/* Grid düzeni: 4 sütunlu yapı */}

@@ -9,7 +9,7 @@ const RootLayout = () => {
   const isLoginPage = location.pathname === '/login' || location.pathname === '/register';
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       {/* Navbar: Login ve kayıt sayfasında scroll'a bağlı görünür */}
       {!isLoginPage && <Navbar />}
 

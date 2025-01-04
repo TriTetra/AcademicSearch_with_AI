@@ -1,86 +1,81 @@
+import React from 'react';
+import { ChevronDown } from 'lucide-react'; // ChevronDown icon
 
-import React from 'react';                      // React kütüphanesini bileşen oluşturmak için içe aktarır
-import { ChevronDown } from 'lucide-react';     // ChevronDown ikonunu lucide-react kütüphanesinden içe aktarır
-
-
-// @ts-ignore
-import searchIconPNG from '../assets_comp/paper.png';
-// @ts-ignore
-import documentPNG from '../assets_comp/google-docs.png';
-// @ts-ignore
-import aiPNG from '../assets_comp/generative.png';
-// @ts-ignore
-import integratePNG from '../assets_comp/data-integration.png';
-
-{/* Bir navigasyon bağlantısının yapısını tanımlayan bir arayüz*/}
-interface NavLink {
-  id: string; 
-  name: string; 
-
-  // Opsiyonel açılır menü öğeleri (kimlik, isim ve opsiyonel açıklama)
-  items?: { id: string; name: string; description?: string;}[]; 
+// Define the structure of items in navigation links
+interface NavLinkItem {
+  id: string;
+  name: string;
+  description?: string;
+  href: string; // Add href to support redirection
 }
 
+// Define the main navigation link structure
+interface NavLink {
+  id: string;
+  name: string;
+  href?: string; // Top-level links can also have href
+  items?: NavLinkItem[]; // Array of sub-items
+}
 
-{/* Navigasyon bağlantılarının tanımlandığı liste */}
+// Define the navigation links
 const navLinks: NavLink[] = [
   {
-    id: 'product',      // Bu bağlantı için benzersiz bir kimlik
-    name: 'Product',    // Ana bağlantının adı
-    items: [            // Bu bağlantıya ait açılır menü öğeleri
-      { id: 'features', name: 'Features', description: 'Core product functionalities'},               // Menü öğesi 1
-      { id: 'integrations', name: 'Integrations', description: 'External platform connections'},                   // Menü öğesi 2
-      { id: 'dashboard', name: 'Dashboard', description: 'Personalized user panels'},            // Menü öğesi 3
-      { id: 'insights', name: 'Insights', description: 'AI-driven recommendations'},              // Menü öğesi 4
-      { id: 'collaboration', name: 'Collaboration', description: 'Teamwork and sharing'},    // Menü öğesi 5
-      { id: 'reports', name: 'Reports', description: 'User-specific performance metrics'},    // Menü öğesi 6
+    id: 'product',
+    name: 'Product',
+    items: [
+      { id: 'features', name: 'Features', description: 'Core product functionalities', href: '/under-development' },
+      { id: 'integrations', name: 'Integrations', description: 'External platform connections', href: '/under-development' },
+      { id: 'dashboard', name: 'Dashboard', description: 'Personalized user panels', href: '/under-development' },
+      { id: 'insights', name: 'Insights', description: 'AI-driven recommendations', href: '/under-development' },
+      { id: 'collaboration', name: 'Collaboration', description: 'Teamwork and sharing', href: '/under-development' },
+      { id: 'reports', name: 'Reports', description: 'User-specific performance metrics', href: '/under-development' },
     ],
   },
   {
-    id: 'solutions',    // Bu bağlantı için benzersiz bir kimlik
-    name: 'Solutions',  // Ana bağlantının adı
-    items: [            // Bu bağlantıya ait açılır menü öğeleri
-      { id: 'researchers', name: 'Researchers', description: 'Academics and students' },
-      { id: 'institutions', name: 'Institutions', description: 'Universities and libraries' },
-      { id: 'professionals', name: 'Professionals', description: 'Corporate R&D teams' },
-      { id: 'education', name: 'Education', description: 'Schools and training' },
-      { id: 'teams', name: 'Teams', description: 'Collaborative group projects' },
-      { id: 'healthcare', name: 'Healthcare', description: 'Medical research solutions' },                        // Menü öğesi 1
-      { id: 'enterprise', name: 'Enterprise', description: 'Large organizational tools' },           // Menü öğesi 2
+    id: 'solutions',
+    name: 'Solutions',
+    items: [
+      { id: 'researchers', name: 'Researchers', description: 'Academics and students', href: '/under-development' },
+      { id: 'institutions', name: 'Institutions', description: 'Universities and libraries', href: '/under-development' },
+      { id: 'professionals', name: 'Professionals', description: 'Corporate R&D teams', href: '/under-development' },
+      { id: 'education', name: 'Education', description: 'Schools and training', href: '/under-development' },
+      { id: 'teams', name: 'Teams', description: 'Collaborative group projects', href: '/under-development' },
+      { id: 'healthcare', name: 'Healthcare', description: 'Medical research solutions', href: '/under-development' },
+      { id: 'enterprise', name: 'Enterprise', description: 'Large organizational tools', href: '/under-development' },
     ],
   },
-  { id: 'pricing', name: 'Pricing' }, // Açılır menü olmadan sadece bir bağlantı
+  { id: 'pricing', name: 'Pricing', href: '/under-development' }, // Top-level link
 ];
 
-
-// Navigasyon bağlantılarını render eden bir bileşen
+// NavLinks component
 const NavLinks = () => {
   return (
     <div className="flex items-center gap-1">
-      {/* Her ana bağlantıyı döngüyle oluşturur */}
       {navLinks.map((link) => (
         <div key={link.id} className="relative group">
-          {/* Ana bağlantı düğmesi */}
-          <button className="flex items-center gap-0.5 px-3 py-2 text-base hover:text-gray-900 rounded-md hover:bg-gray-100 font-medium">
-            {link.name} {/* Bağlantı ismini gösterir */}
-            {link.items && <ChevronDown className="pl-1 w-4 h-4" />} {/* Açılır menü varsa ChevronDown ikonu */}
-          </button>
-          
-          {/* Eğer bağlantının bir açılır menüsü varsa */}
+          {/* Top-level link */}
+          <a
+            href={link.href || '#'}
+            className="flex items-center gap-0.5 px-3 py-2 text-base hover:text-gray-900 rounded-md hover:bg-gray-100 font-medium"
+          >
+            {link.name}
+            {link.items && <ChevronDown className="pl-1 w-4 h-4" />}
+          </a>
+
+          {/* Dropdown menu */}
           {link.items && (
             <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="bg-white rounded-lg shadow-lg ring-1 ring-gray-200 min-w-[300px]">
                 <div className="p-2">
-                  {/* Her açılır menü öğesini oluşturur */}
                   {link.items.map((item) => (
                     <a
                       key={item.id}
-                      href="#" // Öğeye tıklanabilir bir bağlantı ekler
+                      href={item.href || '#'}
                       className="block px-4 py-1 text-sm text-black-100 hover:bg-gray-50 rounded-md font-medium"
                     >
-                      <div>{item.name}</div> {/* Açılır menü öğesinin ismi */}
+                      <div>{item.name}</div>
                       {item.description && (
-                        <div className=" text-gray-500 mt-0.2 font-light">{item.description}</div> // Açıklama varsa gösterir
+                        <div className="text-gray-500 mt-0.2 font-light">{item.description}</div>
                       )}
                     </a>
                   ))}
@@ -94,4 +89,4 @@ const NavLinks = () => {
   );
 };
 
-export default NavLinks; // NavLinks bileşenini dışa aktarır
+export default NavLinks;
